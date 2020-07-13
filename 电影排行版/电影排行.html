@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影排行版</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .box{
+            width: 300px;
+            height: 450px;
+            margin: 50px auto;
+            border: 1px solid #000;
+
+        }
+        .box>h1 {
+            font-size:20px;
+            line-height: 35px;
+            color:deepskyblue;
+            padding-left: 10px;
+            border-bottom:  1px dashed #cccccc;
+        }
+        ul>li{
+            list-style:none;
+            padding:5px 10px;
+            border-bottom:  1px dashed #ccc;
+        }
+        ul>li:nth-child(-n+3) span{
+            background: deepskyblue;
+        }
+        li>span{
+            display: inline-block;
+            width:20px;
+            height:20px;
+            background: #ccc;
+            text-align: center;
+            line-height:20px;
+        }
+        .content{
+            overflow:hidden;
+            margin-top: 5px;
+            display:none;
+        }
+        .content>img{
+            width:80px;
+            height:120px;
+            float:left;
+        }
+        .content>p{
+            width:180px;
+            height:120px;
+            float:right;
+            font-size:12px;
+            line-height:20px;
+        }
+        .current .content{
+            display:block;
+        }
+    </style>
+    <script src="jquery-3.5.1.js">
+    </script>
+    <script>
+        $(function(){
+            $("li").mouseenter(function () {
+                $(this).addClass("current");
+            })
+            //li move
+            $("li").mouseleave(function () {
+                $(this).removeClass("current");
+            })
+            //$("li").hover
+
+        });
+    </script>
+</head>
+<body>
+<div class="box">
+    <h1>电影排行榜</h1>
+    <ul>
+        <li ><span>1</span> 电影名称
+        <div class="content">
+            <img src="寄生虫.jpeg" alt="">
+            <p>《寄生虫》是由奉俊昊执导，宋康昊、李善均、赵茹珍、崔宇植、朴素丹等主演的剧情片。
+                影片讲述住在廉价的半地下室出租房里的一家四口，原本均是无业游民。在长子基宇隐瞒真实学历，去一户住着豪宅的富有家庭担任家教后，一家人的生活渐渐起了变化 [1]  。
+                2019年，该片获得第72届戛纳国际电影节金棕榈奖，这是韩国电影首次拿下金棕榈奖 [2]  。在第92届奥斯卡金像奖中，《寄生虫》获得最佳导演奖、最佳原创剧本奖、最佳国际影片奖，并且创造历史成为第一部获得最佳影片奖的非英语片。</p>
+        </div></li>
+        <li><span>2</span> 电影名称</li>
+        <li><span>3</span> 电影名称</li>
+        <li><span>4</span> 电影名称</li>
+        <li><span>5</span> 电影名称</li>
+        <li><span>6</span> 电影名称</li>
+    </ul>
+</div>
+
+</body>
+</html>
